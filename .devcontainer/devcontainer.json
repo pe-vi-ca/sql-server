@@ -6,7 +6,7 @@
     "features": {
         "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
-    "postCreateCommand": "docker-compose up -d",
+    "postCreateCommand": "docker run -e \"ACCEPT_EULA=Y\" -e \"MSSQL_SA_PASSWORD=Gestion8.0\" -e \"MSSQL_PID=Developer\" -p 1433:1433 -d mcr.microsoft.com/mssql/server:latest",
     "customizations": {
         "vscode": {
             "extensions": [
